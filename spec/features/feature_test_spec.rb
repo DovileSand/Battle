@@ -1,6 +1,6 @@
 require 'capybara'
 
-feature "entering player names" do
+feature "enter player names" do
 
   scenario "asks to fill in player names" do
 
@@ -11,8 +11,8 @@ feature "entering player names" do
     fill_in('Player2', with: 'RJ')
 
     click_button('Save')
+    expect(page).to have_content('Dovile vs. RJ')
 
   end
-
 
 end
