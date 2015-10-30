@@ -6,7 +6,7 @@ feature 'hitpoints' do
 
     sign_in_and_play
 
-    expect(page).to have_content('900 Hitpoints')
+    expect(page).to have_content('Eagle has 100 Hitpoints')
 
   end
 
