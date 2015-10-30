@@ -7,7 +7,7 @@ feature "enter player names" do
 
     sign_in_and_play
 
-    expect(page).to have_content('Dovile vs. RJ')
+    expect(page).to have_content('Duck vs. Eagle')
 
   end
 

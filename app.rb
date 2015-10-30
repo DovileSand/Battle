@@ -11,15 +11,21 @@ run! if app_file == $0
   end
 
   post '/names' do
-    session['p1'] = params[:Player1]
-    session['p2'] = params[:Player2]
+    $p1 = params[:Player1]
+    $p2 = params[:Player2]
     redirect('/play')
   end
 
   get '/play' do
-    @p1 = session['p1']
-    @p2 = session['p2']
+    @p1 = $p1
+    @p2 = $p2
     erb(:play)
+  end
+
+  get '/attack' do
+    @p1 = $p1
+    @p2 = $p2
+    erb(:attack)
   end
 
 end
